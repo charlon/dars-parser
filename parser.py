@@ -15,4 +15,4 @@ def parse(filepath):
 if __name__ == "__main__":
     filepath = 'degrees/BS Aeronautical Astro Eng.html'
     soup = parse(filepath)
-    print(soup.prettify())
+    print(soup.div.div.div['data-dprog'])
