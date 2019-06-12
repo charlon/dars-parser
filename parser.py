@@ -15,4 +15,6 @@ def parse(filepath):
 if __name__ == "__main__":
     filepath = 'degrees/BS Aeronautical Astro Eng.html'
     soup = parse(filepath)
+    #import pdb; pdb.set_trace()
     print(soup.div.div.div['data-dprog'])
+    print(soup.h1.string)
