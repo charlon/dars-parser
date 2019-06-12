@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-def main():
-    filepath = 'degrees/BS Aeronautical Astro Eng.html'
+def parse(filepath):
 
     with open(filepath) as fp:
         myfile = fp.read()
@@ -13,4 +12,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    filepath = 'degrees/BS Aeronautical Astro Eng.html'
+    parse(filepath)
