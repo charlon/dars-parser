@@ -16,5 +16,5 @@ if __name__ == "__main__":
     filepath = 'degrees/astronomy.html'
     soup = parse(filepath)
     #import pdb; pdb.set_trace()
-    print(soup.div.div.div['data-dprog'])
+    print(soup.div['data-dprog'])
     print(soup.h1.string)
