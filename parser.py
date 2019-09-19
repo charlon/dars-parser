@@ -3,6 +3,14 @@
 from bs4 import BeautifulSoup
 
 
+class DegreeRequirements:
+    code = ''
+    name = ''
+
+    def __init__(self, soup):
+        self.code = soup.div['data-dprog']
+        self.name = soup.h1.string
+
 def parse(filepath):
     """ Parses an html DARS audit.
     """
@@ -17,6 +25,6 @@ def parse(filepath):
 if __name__ == "__main__":
     filepath = 'degrees/astronomy.html'
     soup = parse(filepath)
-    #import pdb; pdb.set_trace()
-    print(soup.div['data-dprog'])
-    print(soup.h1.string)
+    curric = DegreeRequirements(soup)
+    print(curric.code)
+    print(curric.name)
