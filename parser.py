@@ -9,7 +9,7 @@ class DegreeRequirements:
 
     def __init__(self, soup):
         self.code = soup.div['data-dprog']
-        self.name = soup.h1.string
+        self.name = soup.h1.string.lstrip(' ').rstrip(' ')
 
 def parse(filepath):
     """ Parses an html DARS audit.
